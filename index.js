@@ -3,7 +3,9 @@ import { Activities, Observers, Permissions, Units } from './src/constants'
 const { AppleHealthKit } = require('react-native').NativeModules
 
 
-export const HealthKit = {
+export const HealthKit = Platform.OS !== 'ios'
+? {}
+: {
   initHealthKit: AppleHealthKit.initHealthKit,
   isAvailable: AppleHealthKit.isAvailable,
   getBiologicalSex: AppleHealthKit.getBiologicalSex,
