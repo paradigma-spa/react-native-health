@@ -1,4 +1,5 @@
 import { Activities, Observers, Permissions, Units } from './src/constants'
+import { Platform } from 'react-native'
 
 const { AppleHealthKit } = require('react-native').NativeModules
 
